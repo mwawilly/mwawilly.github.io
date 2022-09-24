@@ -47,7 +47,7 @@ boutonRond.addEventListener("click", function () {
  * ---------------------------------
  */
 
-const text = " < Site De MWAWILLY />     ";
+const text = " < Site De MWAWILLY />   ";
 let index = 0;
 let limit = false;
 
