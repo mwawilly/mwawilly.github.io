@@ -69,16 +69,17 @@ let timer = setInterval(start, 350);
 
 /*
  * --------------------------------
- * draggable box
+ * draggable wrapper
  * ---------------------------------
  */
+
 $(function () {
   $(".cube").draggable();
 });
 
 $(document).ready(function () {
   var shouldCancel = false;
-  $(".wrapper").draggable({
+  $("#wrapper").draggable({
     containment: "#mainBox",
     revert: function () {
       if (shouldCancel) {
@@ -90,3 +91,15 @@ $(document).ready(function () {
     },
   });
 });
+
+// [MOBILE] draggable wrapper for MOBILE mais foctionne mal //
+window.onload = function () {
+  var wrapperDnD = document.getElementById("wrapper");
+
+  wrapperDnD.addEventListener("touchmove", function (ev) {
+    var touchLocation = ev.targetTouches[0];
+
+    wrapperDnD.style.left = touchLocation.pageX + "px";
+    wrapperDnD.style.top = touchLocation.pageY + "px";
+  })
+};

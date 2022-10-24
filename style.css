@@ -252,7 +252,7 @@ li {
   /*100% {width:0; background-color:#eee;}*/
 }
 
-.wrapper {
+#wrapper {
   display: table;
   width: auto;
   height: auto;
@@ -338,8 +338,7 @@ li {
 .cover {
   width: 100%;
   height: 120px;
-  background: url("http://www.feversore.com/images/img_564.jpg") no-repeat 50%
-    50%;
+  background: url("folder/keyboard_site.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -465,6 +464,10 @@ li {
   animation-delay: 0.3s;
 }
 
+.card-back {
+  background-size: contain;
+  background: url("");
+}
 .card-back .content {
   display: table-cell;
   padding: 30px;
